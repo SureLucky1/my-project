@@ -1,0 +1,13 @@
+* {
+  height: auto;
+  width: auto;
+}
+* .app {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+* .link {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=app.css.map */

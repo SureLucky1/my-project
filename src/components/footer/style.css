@@ -1,0 +1,515 @@
+.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  margin-top: 180px;
+}
+.one .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 1500px;
+}
+.one .inner .item {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.one .inner .item div {
+  width: 17.5%;
+  height: auto;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.one .inner .item div h6 {
+  font-size: 20px;
+}
+.one .inner .item div h4 {
+  font-size: 17px;
+  cursor: pointer;
+}
+.one .inner .item div h4:hover {
+  text-decoration: underline;
+}
+.one .inner .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.one .inner .footer .title {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 370px;
+  align-items: flex-end;
+}
+.one .inner .footer .title h5 img {
+  width: 100px;
+  margin: 0px 15px;
+}
+.one .inner .footer .title h6 {
+  padding-bottom: 9px;
+}
+.one .inner .footer .footerInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+}
+.one .inner .footer .footerInner .Icon {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.one .inner .footer .footerInner .Icon .iconItem {
+  font-size: 23px;
+}
+.one .inner .footer .footerInner .other {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.one .containerr {
+  display: none;
+  height: auto !important;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center !important;
+}
+.one .containerr .Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: auto;
+  font-size: 18px;
+}
+.one .containerr .Footer .footItem {
+  margin: 10px 0px !important;
+}
+.one .containerr .footer {
+  width: 100vw !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center !important;
+  height: auto;
+}
+.one .containerr .footer .title {
+  width: 100vw !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-content: center !important;
+  position: relative;
+  left: 8vw;
+}
+.one .containerr .footer .title h5 {
+  font-size: 28px;
+  color: rgb(109, 108, 108);
+}
+.one .containerr .footer .title h6 {
+  margin-top: 9.5px;
+  color: rgb(189, 189, 189);
+}
+.one .containerr .footer .footerInner {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  left: 1vw;
+}
+.one .containerr .footer .footerInner .Icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+  margin-right: 30px;
+  font-size: 23px;
+  position: relative;
+}
+.one .containerr .footer .footerInner .Icon .iconItem {
+  margin-left: 30px;
+}
+.one .containerr .footer .footerInner .Other {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  height: 80px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  left: -4vw !important;
+}
+.one .containerr .footer .footerInner .Other .earthIcon {
+  position: relative;
+  right: 7px;
+  bottom: 5px;
+}
+.one .containerr .footer .footerInner .Other h5 {
+  font-size: 20px;
+  width: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+  }
+  .one .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1500px;
+  }
+  .one .inner .item {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .one .inner .item div {
+    width: 29%;
+    height: auto;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .one .inner .item div h6 {
+    font-size: 20px;
+  }
+  .one .inner .item div h4 {
+    font-size: 18px;
+  }
+  .one .inner .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .one .inner .footer .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 370px;
+  }
+  .one .inner .footer .title h5 img {
+    width: 100px;
+    margin: 0px 15px;
+  }
+  .one .inner .footer .footerInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+  }
+  .one .inner .footer .footerInner .Icon {
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .one .inner .footer .footerInner .Icon .iconItem {
+    font-size: 23px;
+  }
+  .one .inner .footer .footerInner .other {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .one .containerr {
+    display: none;
+    height: auto !important;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center !important;
+    width: 100%;
+  }
+  .one .containerr s .Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: auto;
+    font-size: 18px;
+  }
+  .one .containerr s .Footer .footItem {
+    margin: 10px 0px !important;
+  }
+  .one .containerr .footer {
+    width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center !important;
+    height: auto;
+  }
+  .one .containerr .footer .title {
+    width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-content: center !important;
+    position: relative;
+    left: 8vw;
+  }
+  .one .containerr .footer .title h5 {
+    font-size: 28px;
+    color: rgb(109, 108, 108);
+  }
+  .one .containerr .footer .title h6 {
+    margin-top: 9.5px;
+    color: rgb(189, 189, 189);
+  }
+  .one .containerr .footer .footerInner {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 1vw;
+  }
+  .one .containerr .footer .footerInner .Icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+    margin-right: 30px;
+    font-size: 23px;
+    position: relative;
+  }
+  .one .containerr .footer .footerInner .Icon .iconItem {
+    margin-left: 30px;
+  }
+  .one .containerr .footer .footerInner .Other {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: relative;
+    height: 80px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    left: -4vw !important;
+  }
+  .one .containerr .footer .footerInner .Other .earthIcon {
+    position: relative;
+    right: 7px;
+    bottom: 5px;
+  }
+  .one .containerr .footer .footerInner .Other h5 {
+    font-size: 20px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    position: relative;
+    width: 100%;
+    height: auto !important;
+  }
+  .one .inner {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1500px;
+  }
+  .one .inner .item {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .one .inner .item div {
+    width: 31%;
+    height: auto;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .one .inner .item div h6 {
+    font-size: 20px;
+  }
+  .one .inner .item div h4 {
+    font-size: 18px;
+  }
+  .one .inner .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .one .inner .footer .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 370px;
+  }
+  .one .inner .footer .title h5 img {
+    width: 100px;
+    margin: 0px 15px;
+  }
+  .one .inner .footer .footerInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+  }
+  .one .inner .footer .footerInner .Icon {
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .one .inner .footer .footerInner .Icon .iconItem {
+    font-size: 23px;
+  }
+  .one .inner .footer .footerInner .other {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .one .containerr {
+    display: flex;
+    height: auto !important;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center !important;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .one .containerr .Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+  .one .containerr .Footer .footItem {
+    margin: 10px 0px !important;
+  }
+  .one .containerr .footer {
+    width: 100% !important;
+    display: inline-block;
+    height: auto;
+  }
+  .one .containerr .footer .title {
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    width: 100% !important;
+  }
+  .one .containerr .footer .title h5 {
+    font-size: 28px;
+    color: rgb(109, 108, 108);
+    text-align: center;
+  }
+  .one .containerr .footer .title h6 {
+    margin-top: 9.5px;
+    color: rgb(189, 189, 189);
+    text-align: center;
+  }
+  .one .containerr .footer .footerInner {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 0vw;
+  }
+  .one .containerr .footer .footerInner .Icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+    margin-right: 0px;
+    font-size: 28px;
+    position: relative;
+  }
+  .one .containerr .footer .footerInner .Icon .iconItem {
+    margin: 0px 13px;
+  }
+  .one .containerr .footer .footerInner .Other {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 80px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    left: 0px !important;
+  }
+  .one .containerr .footer .footerInner .Other .earthIcon {
+    position: relative;
+    right: 7px;
+    bottom: 5px;
+  }
+  .one .containerr .footer .footerInner .Other h5 {
+    font-size: 20px;
+    width: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
