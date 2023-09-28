@@ -219,7 +219,6 @@ $media-xs: 600px;
 
                 .searchIcon {
 
-                    // display: none;
                     opacity: 0;
                     z-index: 0;
                     background-color: black;
@@ -261,15 +260,6 @@ $media-xs: 600px;
                     @include media-bp-xs($media-xs) {}
 
                     ;
-
-                    // position: relative;
-                    // left: 13px;
-                    // max-width: 40vw;
-                    // font-size: 20px;
-                    // height: 44px;
-                    // opacity: 1;
-                    // z-index: 1;
-                    // bottom: 0px;
                 }
 
                 .searchIcon.hover {
@@ -809,12 +799,8 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -828,7 +814,7 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
+
                     gap: 12px;
                     list-style: none;
                     overflow-x: hidden;
@@ -933,12 +919,8 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -952,7 +934,6 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
                     gap: 12px;
                     list-style: none;
                     overflow-x: hidden;
@@ -1057,12 +1038,8 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -1076,7 +1053,6 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
                     gap: 12px;
                     list-style: none;
                     overflow-x: hidden;
@@ -1181,12 +1157,8 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -1200,7 +1172,6 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
                     gap: 12px;
                     list-style: none;
 
@@ -1313,12 +1284,8 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -1332,10 +1299,10 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
+
                     gap: 12px;
                     list-style: none;
-                    overflow: hidden; //由overflow-x: hidden;轉成
+                    overflow: hidden;
                     scroll-behavior: smooth;
 
 
@@ -1437,12 +1404,8 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -1456,10 +1419,9 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
                     gap: 12px;
                     list-style: none;
-                    overflow: hidden; //由overflow-x: hidden;轉成
+                    overflow: hidden;
                     scroll-behavior: smooth;
 
 
@@ -1560,12 +1522,9 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
+
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -1579,10 +1538,10 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
+
                     gap: 12px;
                     list-style: none;
-                    overflow: hidden; //由overflow-x: hidden;轉成
+                    overflow: hidden;
                     scroll-behavior: smooth;
 
 
@@ -1684,12 +1643,9 @@ $media-xs: 600px;
                         text-align: center;
                         line-height: 55px;
                         border-radius: 50%;
-                        // background: #d8d5f2;
+
                         margin-top: 33px;
 
-                        // &:hover {
-                        //     background: #efedfb;
-                        // }
                     }
                 }
 
@@ -1703,7 +1659,7 @@ $media-xs: 600px;
                     font-size: 17px;
                     background-color: transparent;
                     position: relative;
-                    //tab area
+
                     gap: 12px;
                     list-style: none;
 

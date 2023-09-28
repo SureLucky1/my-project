@@ -427,7 +427,7 @@ html {
                 }
 
                 &:last-child {
-                    position: absolute; //使用absolute,而不用relative是要令元素脫離原本規則範圍去定位
+                    position: absolute;
                     left: 45%;
                     bottom: 45%;
                     width: 15%;
@@ -607,9 +607,6 @@ html {
     .containerr {
         background-color: rgb(110, 110, 255);
         padding: 30px 100px;
-        // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-        // background-size: cover;
-        // background-position: center center;
         height: auto;
         width: 1500px;
         color: white;
@@ -664,12 +661,10 @@ html {
             padding-right: 130px;
 
             .img {
-                // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
                 position: relative;
                 padding-right: 170px;
                 left: 8%;
                 overflow: hidden;
-                // top: 150px;
                 transform: scale(3.20);
             }
         }
@@ -901,10 +896,6 @@ html {
         justify-content: space-around;
         align-items: center;
         color: #fff;
-        // background-image: url(../../../public/img/bg-signup-1400-x1.jpg);
-        // background-size: cover;
-        // background-position-x: center;
-        // background-position-y: center;
         height: 400px;
         padding: 0px 30px;
         background-color: rgb(78, 30, 30);
@@ -926,7 +917,6 @@ html {
         }
 
         .img {
-            //用一個外層去包圖片自行移而不變形
             width: 300px;
             height: auto;
             position: relative;
@@ -1152,9 +1142,6 @@ html {
         .containerr {
             background-color: rgb(110, 110, 255);
             padding: 30px 100px;
-            // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-            // background-size: cover;
-            // background-position: center center;
             height: auto;
             width: 100%;
             color: white;
@@ -1210,12 +1197,10 @@ html {
                 padding-right: 130px;
 
                 .img {
-                    // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
                     position: relative;
                     padding-right: 170px;
                     left: 10%;
                     overflow: hidden;
-                    // top: 150px;
                     transform: scale(4);
                 }
             }
@@ -1526,7 +1511,7 @@ html {
                     }
 
                     &:last-child {
-                        position: absolute; //使用absolute,而不用relative是要令元素脫離原本規則範圍去定位
+                        position: absolute;
                         left: 45%;
                         bottom: 45%;
                         width: 15%;
@@ -1622,10 +1607,6 @@ html {
             justify-content: space-around;
             align-items: center;
             color: #fff;
-            // background-image: url(../../../public/img/bg-signup-1400-x1.jpg);
-            // background-size: cover;
-            // background-position-x: center;
-            // background-position-y: center;
             height: 250px;
             padding: 0px 30px;
             background-color: rgb(78, 30, 30);
@@ -1647,7 +1628,6 @@ html {
             }
 
             .img {
-                //用一個外層去包圖片自行移而不變形
                 width: 300px;
                 height: auto;
                 position: relative;
@@ -1907,7 +1887,7 @@ html {
                     }
 
                     &:last-child {
-                        position: absolute; //使用absolute,而不用relative是要令元素脫離原本規則範圍去定位
+                        position: absolute;
                         left: 45%;
                         bottom: 45%;
                         width: 15%;
@@ -1933,9 +1913,7 @@ html {
         .containerr {
             background-color: rgb(110, 110, 255);
             padding: 30px 100px;
-            // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-            // background-size: cover;
-            // background-position: center center;
+
             height: auto;
             width: 100%;
             color: white;
@@ -1991,12 +1969,12 @@ html {
                 padding-right: 130px;
 
                 .img {
-                    // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
+
                     position: relative;
                     padding-right: 170px;
                     left: 20%;
                     overflow: hidden;
-                    // top: 150px;
+
                     transform: scale(5.5);
                 }
             }
@@ -2296,7 +2274,7 @@ html {
             height: auto;
             width: 100%;
             margin: 50px 0px;
-            flex-wrap: wrap; //不使用column, 而使用wrap是可以令到內容(img)自由收縮
+            flex-wrap: wrap;
 
             button {
                 margin-top: 100px;
@@ -2372,9 +2350,6 @@ html {
 
         .containerr {
             background-color: rgb(110, 110, 255);
-            // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-            // background-size: cover;
-            // background-position: center center;
             height: 500px;
             width: 100%;
             color: white;
@@ -2431,33 +2406,6 @@ html {
                 height: 300px;
                 padding-right: 100px;
 
-
-                // .img {
-                //     left: 20%;
-                //     background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-                //     position: relative;
-                //     padding-right: 170px;
-                //     overflow: hidden;
-                //     height: 50px;
-                //     // top: 150px;
-                //     display: none;
-
-                // }
-
-                // .img2 {
-                //     position: relative;
-                //     padding-right: 100px;
-                //     overflow: hidden;
-
-                //     background-size: cover;
-                //     background-position-x: right;
-                //     background-position-y: center;
-                //     width: 1000px;
-                //     height: auto;
-                //     background-color: #fff;
-                //     top: 10px;
-
-                // }
             }
         }
     }
@@ -2783,9 +2731,7 @@ html {
 
         .containerr {
             background-color: rgb(110, 110, 255);
-            // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-            // background-size: cover;
-            // background-position: center center;
+
             height: 500px;
             width: 100%;
             color: white;
@@ -2843,33 +2789,6 @@ html {
                 height: 300px;
                 padding-right: 100px;
 
-
-                // .img {
-                //     left: 20%;
-                //     background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-                //     position: relative;
-                //     padding-right: 170px;
-                //     overflow: hidden;
-                //     height: 50px;
-                //     // top: 150px;
-                //     display: none;
-
-                // }
-
-                // .img2 {
-                //     position: relative;
-                //     padding-right: 100px;
-                //     overflow: hidden;
-
-                //     background-size: cover;
-                //     background-position-x: right;
-                //     background-position-y: center;
-                //     width: 1000px;
-                //     height: auto;
-                //     background-color: #fff;
-                //     top: 10px;
-
-                // }
             }
         }
     }
@@ -3307,9 +3226,6 @@ html {
 
         .containerr {
             background-color: rgb(110, 110, 255);
-            // background-image: url('../../../public/img/logo-maker-banner-wide-desktop-1352-2x.jpeg');
-            // background-size: cover;
-            // background-position: center center;
             height: 500px;
             width: 100%;
             color: white;

@@ -15,12 +15,6 @@ export default function AdaptiveHeight(){
       color:"red"
 
     };
-    // const videoSet = [
-    //   {source: './img/rb8jtakrisiz0xtsffwi.mp4'},
-    //   {source: "./img/yja2ld5fnolhsixj3xxw.mp4"},
-    //   {source: "./img/bsncmkwya3nectkensun.mp4"},
-    //   {source: "./img/plfa6gdjihpdvr10rchl.mp4"},
-    // ]
 
     const [showModal, setShowModal] = useState(false);
     const [overflow, setOverflow] = useState('none');

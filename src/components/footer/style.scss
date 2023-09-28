@@ -541,7 +541,7 @@
                     display: inline-block;
 
                     position: relative;
-                    left: 0px; //重新設定以清除上一次的設定
+                    left: 0px;
                     width: 100% !important;
 
                     h5 {
@@ -565,7 +565,7 @@
                     align-items: center;
                     width: 100%;
                     position: relative;
-                    left: 0vw; //重新設定以清除上一次的設定
+                    left: 0vw;
 
                     .Icon {
                         display: flex;
@@ -573,7 +573,7 @@
                         justify-content: center !important;
                         align-items: center;
                         width: 100%;
-                        margin-right: 0px; //重新設定以清除上一次的設定
+                        margin-right: 0px;
                         font-size: 28px;
                         position: relative;
 
@@ -593,7 +593,7 @@
                         height: 80px;
                         margin-bottom: 20px;
                         font-size: 20px;
-                        left: 0px !important; //重新設定以清除上一次的設定
+                        left: 0px !important;
 
 
                         .earthIcon {
