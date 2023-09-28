@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.87690b92.css",
+    "main.js": "/static/js/main.fae1f584.js",
+    "static/js/787.862d81a9.chunk.js": "/static/js/787.862d81a9.chunk.js",
+    "static/media/logo-maker-banner-tablet-852-2x.jpg": "/static/media/logo-maker-banner-tablet-852-2x.a8c6ff9b96d9f2cb0323.jpg",
+    "index.html": "/index.html",
+    "main.87690b92.css.map": "/static/css/main.87690b92.css.map",
+    "main.fae1f584.js.map": "/static/js/main.fae1f584.js.map",
+    "787.862d81a9.chunk.js.map": "/static/js/787.862d81a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87690b92.css",
+    "static/js/main.fae1f584.js"
+  ]
+}
