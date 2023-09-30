@@ -1,0 +1,78 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  top: 0px;
+  right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.modal .choice {
+  background: white;
+  width: 400px;
+  height: 50%;
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  left: 100px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.modal .choice .info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.modal .choice .info .selection {
+  display: flex;
+  flex-direction: row;
+}
+.modal .choice .info .selection h4 {
+  margin: 0px 10px;
+  border-bottom: 2px solid red;
+}
+.modal .choice .info .innerChoice {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  overflow: scroll;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+.modal .choice .info .innerChoice .languagesChoice {
+  display: none;
+}
+.modal .choice .info .innerChoice .languagesChoice.show {
+  display: flex;
+  flex-direction: column;
+}
+.modal .choice .info .innerChoice .languagesChoice.show h5 {
+  margin-top: 20px;
+}
+.modal .choice .info .innerChoice .currency {
+  display: none;
+  height: 100%;
+}
+.modal .choice .info .innerChoice .currency.show {
+  display: flex;
+  flex-direction: column !important;
+  margin: 0px 15px;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.modal .choice .info .innerChoice .currency.show div {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px !important;
+  background-color: aqua;
+  height: 50px;
+  width: 100%;
+}
+.modal .choice .info .innerChoice .currency.show div h6 b {
+  margin-top: 20px !important;
+  display: block;
+}/*# sourceMappingURL=Modal.css.map */

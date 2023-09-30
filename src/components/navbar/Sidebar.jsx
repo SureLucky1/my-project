@@ -1044,7 +1044,7 @@ Business
                       USD - US$
                       </NavDropdown.Item></li>
                       <li><NavDropdown.Item href="#action4" onClick={() => {setIsDollarOpen(!isDollarOpen); setDollar("€ EUR")}}>
-                        EUR - C
+                        EUR - €
                       </NavDropdown.Item></li>
                       <li><NavDropdown.Item href="#action5" onClick={() => {setIsDollarOpen(!isDollarOpen); setDollar("£ GBP")}}>
                         GBP - £

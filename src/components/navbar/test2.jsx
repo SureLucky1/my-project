@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
 import "./NavT3.scss";
+import Modal from './Modal/Modal2'  
 import { Link, useLocation } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -86,10 +87,18 @@ function OffCanvasExample({ name, ...props }) {
   );
 }
 function Navigationbar() {
+  const [showModal, setShowModal] = useState(false);
   const { pathname } = useLocation();
+  const [display, setDisplay] = useState("flex");
+  const [overflow, setOverflow] = useState('none');
   const [isServOpen, setIsServOpen] = useState(false);
+  const [isExpOpen, setIsExpOpen] = useState(false);
   const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
-
+  const openModal = () => {
+    setDisplay("none");
+    setOverflow('hidden');
+    setShowModal(prev => !prev);
+  };
  function reducer(state, action) {
    switch (action.type) {
      case 'HOVER':
@@ -193,6 +202,11 @@ function Navigationbar() {
  }, [handleIconClick]);
    const toggleServ = () => {
      setIsServOpen(!isServOpen);
+     setIsExpOpen(false);
+   }
+   const toggleExp = () => {
+     setIsExpOpen(!isExpOpen);
+     setIsServOpen(false);
    }
    const myRef = createRef();
    console.log(myRef);
@@ -243,22 +257,73 @@ function Navigationbar() {
        <span className={`fas fa-caret-down second ${isServOpen ? 'rotate' : ''}`}></span>
               </a>
               <ul className={`serv-show ${isServOpen ? 'show1' : ''}`}>
-              <li><b><a href="#">Fiverr Pro</a></b>
+                <div className="group">
+              <li>
+                <b><a href="#">Fiverr Pro</a></b>
               <p>Top freelancers and professional business tools for any project</p>
               </li>
+              </div>
+              <div className="group">
                  <li><a href="#"><b>Fiverr Certified</b></a>
                  <p>Your own branded marketplace of certified expoerts</p>
                  </li>
+                 </div>
+                 <div className="group">
                  <li><a href="#"><b>Fiverr Enterprise</b></a>
                  <p>SaaS to manage your freelance workforce and onboard additional talent</p>
                  </li>
+                 </div>
            </ul>
      </li>               
      <li className="nav-item two" >
-       <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}>Explore</a>
+       <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"} onClick={toggleExp}>Explore
+       <span className={`fas fa-caret-down third ${isExpOpen ? 'rotate' : ''}`}></span></a>
+       <ul className={`serv-explore ${isExpOpen ? 'explore1' : ''}`}>
+       <div className="group">
+              <li><b><a href="#">Discover</a></b>
+              <p>Inspiring projects made on Fiverr</p>
+              </li>
+              </div>
+              <div className="group">
+                 <li><a href="#"><b>Community</b></a>
+                 <p>Connect with Fiverr’s team and community</p>
+                 </li>
+                 </div>
+                                 <div className="group">
+                 <li><a href="#"><b>Guides</b></a>
+                 <p>In-depth guides covering business topics</p>
+                 </li>
+                 </div>
+                                 <div className="group">
+                 <li><a href="#"><b>Podcast</b></a>
+                 <p>Inside tips from top business minds</p>
+                 </li>
+                 </div>
+                                 <div className="group">
+                 <li><a href="#"><b>Learn</b></a>
+                 <p>Professional online courses, led by experts</p>
+                 </li>
+                 </div>
+                                 <div className="group">
+                 <li><a href="#"><b>Blog</b></a>
+                 <p>News, information and community stories</p>
+                 </li>
+                 </div>
+                                 <div className="group">
+                 <li><a href="#"><b>Logo Maker</b></a>
+                 <p>Create your logo instantly</p>
+                 </li>
+                 </div>
+                                 <div className="group">
+                 <li><a href="#"><b>Fiverr Workspace</b></a>
+                 <p>One place to manage your business</p>
+                 </li>
+                 </div>
+           </ul>
      </li>
      <li className="nav-item three" >
-       <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}><FontAwesomeIcon icon={faGlobe} style={{marginRight:"5px"}}fontSize="18px"/>{langValue}</a>
+       <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"} onClick={openModal} ><FontAwesomeIcon icon={faGlobe}  style={{marginRight:"5px"}}fontSize="18px"/>{langValue}</a>
+
      </li>
      <li className="nav-item four" >
        <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}>Become a Seller</a>
@@ -355,7 +420,11 @@ function Navigationbar() {
         <i id="right" className="fa-solid fa-chevron-right"></i>
       </div>
      </div>
-     </div>
+     </div>     
+
+  </div>     <div className="languageModel">
+<Modal showModal={showModal}     setDisplay={display} setShowModal={setShowModal}
+    setOverflow={overflow}/>
      </div></div>
      )
 }

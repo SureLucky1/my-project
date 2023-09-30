@@ -1,0 +1,110 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    right: 0px;
+    justify-content: center;
+    align-items: center;
+
+    .choice {
+        background: white;
+        width: 400px;
+        height: 50%;
+        border-radius: 10px 10px 10px 10px;
+        position: relative;
+        left: 100px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+
+            .selection {
+
+                display: flex;
+                flex-direction: row;
+
+                h4 {
+                    margin: 0px 10px;
+                    border-bottom: 2px solid red;
+                }
+            }
+
+            .innerChoice {
+                display: flex;
+                flex-direction: row;
+                height: 300px;
+                overflow: scroll;
+                justify-content: flex-start;
+                padding-left: 50px;
+
+                .languagesChoice {
+                    display: none;
+
+
+                }
+
+                .languagesChoice.show {
+                    display: flex;
+                    flex-direction: column;
+
+
+                    h5 {
+                        margin-top: 20px;
+                    }
+
+                }
+
+                .currency {
+                    display: none;
+
+                    height: 100%;
+
+
+                }
+
+                .currency.show {
+                    display: flex;
+                    flex-direction: column !important;
+                    margin: 0px 15px;
+                    align-items: flex-start;
+                    width: 100%;
+                    height: 100%;
+
+                    div {
+                        display: inline-block;
+                        text-align: left;
+                        margin-top: 20px !important;
+                        background-color: aqua;
+                        height: 50px;
+                        width: 100%;
+
+                        h6 {
+                            b {
+                                margin-top: 20px !important;
+                                display: block;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 600px) {
+//     .modal {
+//         .Video {
+//             left: 40px;
+//         }
+//     }
+// }
