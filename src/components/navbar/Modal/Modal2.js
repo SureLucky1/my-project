@@ -88,7 +88,7 @@ const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
         <h6><b>Canadian Dollar</b></h6>
         <span>CAD - CA$</span>
         </div>
-        <div> onClick={() =>{setDollar("₪ ILS"); setShowModal(false);}}
+        <div onClick={() =>{setDollar("₪ ILS"); setShowModal(false);}}>
         <h6><b>Israell Shekel</b></h6>
         <span>ILS - ₪</span>
         </div>
