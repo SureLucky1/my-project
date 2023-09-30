@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useContext} from "react";
+import context from "../../../src/index";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Accordion from 'react-bootstrap/Accordion';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -6,7 +7,7 @@ import {  faTwitter, faFacebook, faLinkedin, faPinterest, faInstagram} from '@fo
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import "./style.scss";
 const FooterV2 = () => {
-
+  const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
   return (
     <footer className="one container-fluid">
       <div className="inner">
@@ -89,8 +90,8 @@ const FooterV2 = () => {
           <FontAwesomeIcon icon={faInstagram} className="iconItem" />
           </div>
           <div className="other">
-          <FontAwesomeIcon icon={faGlobe} fontSize="20px"/><h5>English</h5>
-          <h5 style={{marginLeft: "30px"}}>NT$ TWD</h5>
+          <FontAwesomeIcon icon={faGlobe} fontSize="20px"/><h5>{langValue}</h5>
+          <h5 style={{marginLeft: "30px"}}>{Dollar}</h5>
           </div>
         </div>
       </div>
@@ -258,8 +259,8 @@ const FooterV2 = () => {
       <FontAwesomeIcon icon={faInstagram} className="iconItem" />
       </div>
       <div className="Other">
-      <FontAwesomeIcon icon={faGlobe} className="earthIcon"/><h5>English</h5>
-      <h5 style={{marginLeft: "30px"}}>NT$ TWD</h5>
+      <FontAwesomeIcon icon={faGlobe} className="earthIcon"/><h5>{langValue}</h5>
+      <h5 style={{marginLeft: "30px"}}>{Dollar}</h5>
       </div>
     </div>
   </div>

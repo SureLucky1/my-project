@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import "./Sidebar.scss"
+import context from "../../../src/index";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 function Appp() {
-
+  const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
   const [isOpen, setIsOpen] = useState(false);
   const [isFeatOpen, setIsFeatOpen] = useState(false);
   const [isFeattOpen, setIsFeattOpen] = useState(false);
@@ -27,8 +28,6 @@ function Appp() {
   const [isDollarOpen, setIsDollarOpen] = useState(false);
 
   const [activeMainNav, setActiveMainNav] = useState('Dashboard');
-  const [langValue, setlangValue] = useState("English");
-  const [Dollar, setDollar] = useState("NT$ TWD");
   const toggleFeat = () => {
     setIsFeatOpen(!isFeatOpen);
   }

@@ -49,7 +49,7 @@ $media-xs: 600px;
         top: -0px;
         background-color: transparent;
         width: 1500px;
-        padding: 0px 2%;
+        padding: 0px 1.7%;
 
         @include media-bp-up($media-lg) {
             z-index: 0;
@@ -351,7 +351,7 @@ $media-xs: 600px;
                         margin: 0px 15px;
 
                         &:nth-child(1) {
-                            margin: 5px 10px 0px 10px;
+                            margin: 5px 0px 0px 0px;
 
                             width: 200px;
                         }
@@ -363,19 +363,19 @@ $media-xs: 600px;
                         }
 
                         &:nth-child(3) {
-                            margin: 5px 15px 0px 15px;
+                            margin: 5px 8px 0px 13px;
 
-                            width: 85px;
+                            width: 120px;
                         }
 
                         &:nth-child(4) {
-                            margin: 5px 15px 0px 15px;
+                            margin: 5px 9px 0px 9px;
 
                             width: 130px;
                         }
 
                         &:nth-child(5) {
-                            margin: 5px 15px 0px 15px;
+                            margin: 5px 6px 0px 6px;
 
                             width: 60px;
                         }
@@ -388,14 +388,14 @@ $media-xs: 600px;
                             display: flex;
 
                             &:nth-child(1) {
-                                margin: 5px 5px 0px 5px;
+                                margin: 5px 0px 0px 0px;
 
                                 width: 190px;
                                 font-size: 15px;
                             }
 
                             &:nth-child(2) {
-                                margin: 5px 10px 0px 10px;
+                                margin: 5px 15px 0px 15px;
 
                                 width: 45px;
                                 font-size: 15px;
@@ -404,7 +404,7 @@ $media-xs: 600px;
                             &:nth-child(3) {
                                 margin: 5px 10px 0px 10px;
 
-                                width: 78px;
+                                width: 110px;
                                 font-size: 15px;
                             }
 
@@ -516,7 +516,7 @@ $media-xs: 600px;
                         ;
 
                         @include media-bp-md($media-md) {
-                            margin: 0px 10px;
+                            margin: 0px 5px;
                         }
 
                         ;

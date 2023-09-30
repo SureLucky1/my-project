@@ -1,5 +1,5 @@
 
-import React, {createRef, useEffect, useReducer, useState} from "react";
+import React, {createRef, useEffect, useReducer, useState, useContext} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +7,7 @@ import "./NavT3.scss";
 import { Link, useLocation } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import context from "../../../src/index";
 import Appp from './Sidebar';
 const initialState = {
   isHovering: false,
@@ -88,7 +88,7 @@ function OffCanvasExample({ name, ...props }) {
 function Navigationbar() {
   const { pathname } = useLocation();
   const [isServOpen, setIsServOpen] = useState(false);
-
+  const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
 
  function reducer(state, action) {
    switch (action.type) {
@@ -258,7 +258,7 @@ function Navigationbar() {
        <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}>Explore</a>
      </li>
      <li className="nav-item three" >
-       <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}><FontAwesomeIcon icon={faGlobe} style={{marginRight:"5px"}}fontSize="20px"/>English</a>
+       <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}><FontAwesomeIcon icon={faGlobe} style={{marginRight:"5px"}}fontSize="18px"/>{langValue}</a>
      </li>
      <li className="nav-item four" >
        <a className={state.isHovering || pathname !== "/" ? "nav-link hover" : "nav-link"}>Become a Seller</a>
