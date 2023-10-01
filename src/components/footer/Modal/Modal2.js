@@ -3,10 +3,10 @@ import { useSpring, animated } from '@react-spring/web';
 import Button from 'react-bootstrap/Button';
 import "./Modal.scss";
 import context from "../../../index";
-const Modal = ({showModal, setShowModal}) => {
+const Modal = ({showModal, setShowModal, setOverflow, setDisplay}) => {
   const modalRef = useRef();
 const [currencyShow, setCurrencyShow] = useState(false);
-const [languageShow, setLanguageShow] = useState(true);
+const [languageShow, setLanguageShow] = useState(false);
 const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
   const animation = useSpring({
     config: {
@@ -66,6 +66,7 @@ const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
         <h5 onClick={() =>{setlangValue("Italiano"); setShowModal(false);}}>Italiano</h5>
         <h5 onClick={() =>{setlangValue("Nederlands"); setShowModal(false);}}>Nederlands</h5>
       </div>
+      {/*}
       <div className={currencyShow ? 'currency.show' : 'currency'}>
         <div onClick={() =>{setDollar('US$ USD'); setShowModal(false);}}>
         <h6><b>United States Dollar</b></h6>
@@ -160,7 +161,7 @@ const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
         <h6><b>United Arab Emirates Dirham</b></h6>
         <span>AED - AED</span>
         </div>
-      </div>
+      </div>*/}
     </div>
   </div>
 </div>

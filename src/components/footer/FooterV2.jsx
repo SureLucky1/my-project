@@ -1,13 +1,23 @@
-import React, {useContext} from "react";
-import context from "../../../src/index";
+
+import React, {createRef, useEffect, useReducer, useState, useContext} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Accordion from 'react-bootstrap/Accordion';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {  faTwitter, faFacebook, faLinkedin, faPinterest, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import "./style.scss";
-const FooterV2 = () => {
+import Modal from './Modal/Modal2'  
+import context from "../../index";
+
+function FooterV2() {
   const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
+  const [showModal, setShowModal] = useState(false);
+  const [display, setDisplay] = useState("flex");
+  const [overflow, setOverflow] = useState('none');
+  const openModal = () => {
+    setOverflow('hidden');
+    setShowModal(prev => !prev);
+  };
   return (
     <footer className="one container-fluid">
       <div className="inner">
@@ -245,10 +255,11 @@ const FooterV2 = () => {
       </Accordion.Item>
     </Accordion>
     </div>
+
     <div className="footer">
       <div className="title">
       <h5><b>fiverr<span style={{color: "rgb(189, 189, 189)"}}>.</span></b></h5>
-      <h6>© Fiverr International Ltd. 2023</h6>
+      <h6 >© Fiverr International Ltd. 2023</h6>
       </div>
     <div className="footerInner">
       <div className="Icon">
@@ -259,12 +270,16 @@ const FooterV2 = () => {
       <FontAwesomeIcon icon={faInstagram} className="iconItem" />
       </div>
       <div className="Other">
-      <FontAwesomeIcon icon={faGlobe} className="earthIcon"/><h5>{langValue}</h5>
-      <h5 style={{marginLeft: "30px"}}>{Dollar}</h5>
+      <FontAwesomeIcon icon={faGlobe} className="earthIcon"/><h5 onClick={openModal}>{langValue}</h5>
+      <h5 style={{marginLeft: "30px"}} >{Dollar}</h5>
       </div>
+
     </div>
   </div>
   </div>
+            <div className="languageModel">
+<Modal showModal={showModal} setShowModal={setShowModal}/>
+     </div>
     </footer>
   )
 }

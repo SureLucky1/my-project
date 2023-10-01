@@ -95,7 +95,6 @@ function Navigationbar() {
   const [isExpOpen, setIsExpOpen] = useState(false);
   const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
   const openModal = () => {
-    setDisplay("none");
     setOverflow('hidden');
     setShowModal(prev => !prev);
   };
