@@ -62,7 +62,7 @@ const Modal = ({showModal, setShowModal, setOverflow, VideoIndex, setIndex, setD
       <source src={videoSet[VideoIndex].source} type="video/mp4" />
     </video>
 
-              <Button
+              <MdClose
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}
                 style={{cursor: "pointer",
@@ -71,6 +71,7 @@ const Modal = ({showModal, setShowModal, setOverflow, VideoIndex, setIndex, setD
                 right: "20px",
                 width: "32px",
                 height: "32px",
+                backgroundColor:"white",
                 padding: 0,
                 zIndex: 10}}
               />

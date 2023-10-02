@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback, useContext } from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import Button from 'react-bootstrap/Button';
+import { MdClose } from 'react-icons/md';
 import "./Modal.scss";
 import context from "../../../index";
 const Modal = ({showModal, setShowModal}) => {
@@ -165,7 +165,7 @@ const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
   </div>
 </div>
 
-              <Button
+              <MdClose
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}
                 style={{cursor: "pointer",
@@ -174,6 +174,7 @@ const { langValue, setlangValue, Dollar, setDollar } = useContext(context);
                 right: "20px",
                 width: "32px",
                 height: "32px",
+                backgroundColor:"white",
                 padding: 0,
                 zIndex: 10}}
               />
