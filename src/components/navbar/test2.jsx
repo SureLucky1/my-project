@@ -10,6 +10,15 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import context from "../../../src/index";
 import Appp from './Sidebar';
+import Graphic from "./Graphic";
+import Digital from "./Digital";
+import Writing from "./Wiriting";
+import Video from "./Video";
+import Music from "./Music";
+import Programming from "./Programming";
+import Photography from "./Photography";
+import Business from "./Business";
+import AiService from "./AI Services";
 const initialState = {
   isHovering: false,
   isMoving: false
@@ -87,6 +96,18 @@ function OffCanvasExample({ name, ...props }) {
   );
 }
 function Navigationbar() {
+  const [location, setLocation] = useState("fixed")
+  const [show, setShow] = useState("none")
+  const [opcc, setOpcc] = useState(0)
+ const [graphic, setGraphic] = useState(false);  
+ const [digital, setDigital] = useState(false);  
+ const [writing, setWriting] = useState(false);  
+ const [video, setVideo] = useState(false);  
+ const [music, setMusic] = useState(false);  
+ const [programming, setProgramming] = useState(false);  
+ const [photography, setPhotography] = useState(false);  
+ const [business , setBusiness] = useState(false);  
+ const [aiService , setAiService] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const { pathname } = useLocation();
   const [display, setDisplay] = useState("flex");
@@ -232,21 +253,99 @@ function Navigationbar() {
    
    
      }, []);
- 
+
+     useEffect(() => {
+
+      if(pathname === "/rr"){
+        setLocation("relative !important");
+        setShow("flex");
+        setOpcc(1)
+      }else{
+        setLocation("fixed");
+        setShow("none");
+        setOpcc(0)
+      }
+  }, [pathname]);
      return (
        <div>
-       <div className={pathname !== "/one" ? state.isHovering ? "navbar hover" : "navbar" : "navbar hoverr"}>
-       <div className={pathname !== "/one" ? state.isHovering ? "ww hover" : "ww" : "ww hoverr"}>
+                 <style>
+        {`.navbar {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              background-color: transparent;
+              height: 130px;
+              z-index: 99;
+position: ${location};
+top: -0px; 
+
+.ww {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 140px;
+  top: -0px;
+  background-color: transparent;
+  width: 1500px;
+  padding: 0px 1.7%;
+  .small {
+    position: relative !important;
+    width: 1500px;
+    height: 50px;
+    text-align: center;
+    display: ${show};
+  }
+  .small.hover {
+    position: ${location};
+    margin-top: 80px;
+    width: 1500px;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    z-index: 50;
+    transition: 1.5s;
+    height: 50px;
+    text-align: center;
+        }
+        .smallv2 {
+          position: ${location};
+          display: none;
+          z-index: -1;
+          opacity: ${opcc};
+          top: 0;
+      }
+      .smallv2.hover {
+        position: relative;
+        display: none;
+        z-index: 99;
+        opacity: 1;
+    }
+  }
+        .navbar.hover {
+          position: ${location};
+          transition: none;
+          z-index: 50;
+      
+      }`}
+        </style>
+       <div className={pathname !== "/rr" ? state.isHovering ? "navbar hover" : "navbar" : "navbar hoverr"}>
+       <div className={pathname !== "/rr" ? state.isHovering ? "ww hover" : "ww" : "ww hoverr"}>
 
  
-         <div className={pathname !== "/one" ? state.isHovering ? "navv hover" : "navv" : "navv hoverr"}>
+         <div className={pathname !== "/rr" ? state.isHovering ? "navv hover" : "navv" : "navv hoverr"}>
          {['start'].map((placement, idx) => (
         <OffCanvasExample key={idx} placement={placement} name={placement} />
       ))}
          <Link to="/"><h2 className={state.isHovering || pathname !== "/" ? "fiverr hover" : "fiverr"} ><b>fiverr<span style={{color:"green"}}>.</span></b></h2></Link>
          <div className="searchGroup">
-           <input type="text" placeholder="What service are you looking for today?" className={pathname !== "/one" ? state.isHovering ? "fiverrSearch hover" : "fiverrSearch" : "fiverrSearch hover"}/>
-           <FontAwesomeIcon icon={faMagnifyingGlass} className={pathname !== "/one" ? state.isHovering ? "searchIcon hover" : "searchIcon" : "searchIcon hoverr"} fontSize="30px"/>
+           <input type="text" placeholder="What service are you looking for today?" className={pathname !== "/rr" ? state.isHovering ? "fiverrSearch hover" : "fiverrSearch" : "fiverrSearch hover"}/>
+           <FontAwesomeIcon icon={faMagnifyingGlass} className={pathname !== "/rr" ? state.isHovering ? "searchIcon hover" : "searchIcon" : "searchIcon hoverr"} fontSize="30px"/>
          </div>
      <div className="main-nav-item">
      <ul className="navbar-nav">
@@ -335,90 +434,99 @@ function Navigationbar() {
      </div>
      </div>
  
-         <div className={pathname !== "/one" ? state.isMoving ? "small hover" : "small" : "small hoverr"} > 
+         <div className={pathname !== "/rr" ? state.isMoving ? "small hover" : "small" : "small hover"} > 
          <ul className="navbar-nav mini">
-             <Link className="link menuLink" to="/one" >
-               Graphics & Design
-             </Link>
-              
-             <Link className="link menuLink" to="/one" >
-               Digital Marketing
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Writing & Translation
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Video & Animation
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Music & Audio
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Programming & Tech
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Photography
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Business
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               AI Services
-             </Link>
-     </ul>
+         <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setGraphic(true);setAiService(false);setBusiness(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Graphics & Design
+            </Link>
+             
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setDigital(true);setAiService(false);setBusiness(false);setGraphic(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Digital Marketing
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setWriting(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Writing & Translation
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setVideo(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Video & Animation
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setMusic(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setProgramming(false);setPhotography(false);}}>
+              Music & Audio
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setProgramming(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setPhotography(false);}}>
+              Programming & Tech
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setPhotography(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);}}>
+              Photography
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setBusiness(true);setAiService(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Business
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setAiService(true);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              AI Services
+            </Link>
+    </ul>
      </div>
-     <div className={pathname !== "/one" ? state.isMoving ? "smallv2 hover" : "smallv2" : "smallv2 hoverr"} > 
+     <div className={pathname !== "/rr" ? state.isMoving ? "smallv2 hover" : "smallv2" : "smallv2 hover"} > 
          <div className="icon">
         <i id="left" className="fa-solid fa-chevron-left"></i>
       </div>
          <ul className="navbar-nav mini2">
-             <Link className="link menuLink" to="/one" >
-               Graphics & Design
-             </Link>
-              
-             <Link className="link menuLink" to="/one" >
-               Digital Marketing
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Writing & Translation
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Video & Animation
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Music & Audio
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Programming & Tech
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Photography
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               Business
-             </Link>
- 
-             <Link className="link menuLink" to="/one" >
-               AI Services
-             </Link>
+         <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setGraphic(true);setAiService(false);setBusiness(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Graphics & Design
+            </Link>
+             
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setDigital(true);setAiService(false);setBusiness(false);setGraphic(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Digital Marketing
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setWriting(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Writing & Translation
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setVideo(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Video & Animation
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setMusic(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setProgramming(false);setPhotography(false);}}>
+              Music & Audio
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setProgramming(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setPhotography(false);}}>
+              Programming & Tech
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setPhotography(true);setAiService(false);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);}}>
+              Photography
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setBusiness(true);setAiService(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              Business
+            </Link>
+
+            <Link className="link menuLink" to="/rr" onMouseEnter={()=>{setAiService(true);setBusiness(false);setGraphic(false);setDigital(false);setWriting(false);setVideo(false);setMusic(false);setProgramming(false);setPhotography(false);}}>
+              AI Services
+            </Link>
      </ul>
      <div className="icon">
         <i id="right" className="fa-solid fa-chevron-right"></i>
       </div>
      </div>
+     {graphic === true && <Graphic  setGraphic={setGraphic}/>}
+    {digital === true && <Digital  setDigital={setDigital}/>}
+    {writing === true && <Writing setWriting={setWriting}/>}
+    {video === true && <Video setVideo={setVideo}/>}
+    {music === true && <Music setMusic={setMusic}/>}
+    {programming === true && <Programming setProgramming={setProgramming}/>}
+    {photography === true && <Photography setPhotography={setPhotography}/>}
+    {business === true && <Business setBusiness={setBusiness}/>}
+    {aiService === true && <AiService setAiService={setAiService}/>}
      </div>     
 
   </div>     <div className="languageModel">

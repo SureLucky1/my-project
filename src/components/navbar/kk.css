@@ -1,0 +1,302 @@
+.subpage {
+  height: 100%;
+  width: 1500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-self: center;
+  position: relative;
+  margin-top: 70px;
+}
+.subpage h1 {
+  font-size: 30px;
+  text-align: left;
+}
+.subpage .headingGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: blue;
+}
+.subpage .headingGroup button {
+  width: 200px;
+  background-color: aqua;
+}
+.subpage .headingGroup p {
+  width: 800px;
+}
+.subpage .FAQs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.subpage .FAQs .QQ {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.subpage .FAQs .QQ .item {
+  width: 700px;
+  text-align: left;
+  margin: 10px 15px;
+}
+.subpage .FAQs .QQ .item h1 {
+  font-size: 20px;
+}
+.subpage .FAQs .QQ .item p {
+  width: 100%;
+  font-size: 15px;
+}
+.subpage .flex-parent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.subpage .flex-parent .moviebox {
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  width: 18vw;
+  margin: 1vw;
+  border: 1px solid #e67832;
+  background-color: #e67832;
+  color: white;
+  text-decoration: none;
+}
+.subpage .flex-parent .moviebox:hover {
+  filter: grayscale(75%);
+  border: 1px solid #00c3ff;
+  background-color: #00c3ff;
+}
+.subpage .flex-parent .moviebox .movieimg {
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  width: calc(18vw - 2px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.subpage .flex-parent .moviebox .noimg {
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  width: calc(18vw - 2px);
+  height: 26.5vw;
+  background-color: gray;
+}
+.subpage .flex-parent .moviebox .caption {
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  .subpage {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-self: center;
+    position: relative;
+    margin-top: 70px;
+  }
+  .subpage h1 {
+    font-size: 30px;
+    text-align: left;
+  }
+  .subpage .headingGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: blue;
+  }
+  .subpage .headingGroup button {
+    width: 200px;
+    background-color: aqua;
+  }
+  .subpage .headingGroup p {
+    width: 750px;
+    font-size: 15.5px;
+    background-color: burlywood;
+  }
+  .subpage .FAQs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .subpage .FAQs .QQ {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .subpage .FAQs .QQ .item {
+    width: 45%;
+    text-align: left;
+    margin: 10px 15px;
+  }
+  .subpage .FAQs .QQ .item h1 {
+    font-size: 20px;
+  }
+  .subpage .FAQs .QQ .item p {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .subpage {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-self: center;
+    position: relative;
+    margin-top: 70px;
+  }
+  .subpage h1 {
+    font-size: 30px;
+    text-align: left;
+  }
+  .subpage .headingGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: blue;
+  }
+  .subpage .headingGroup button {
+    width: 200px;
+    background-color: aqua;
+  }
+  .subpage .headingGroup p {
+    font-size: 15px;
+    width: 100%;
+  }
+  .subpage .FAQs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .subpage .FAQs .QQ {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .subpage .FAQs .QQ .item {
+    width: 100%;
+    text-align: left;
+    margin: 10px 15px;
+  }
+  .subpage .FAQs .QQ .item h1 {
+    font-size: 20px;
+  }
+  .subpage .FAQs .QQ .item p {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .subpage {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-self: center;
+    position: relative;
+    margin-top: 70px;
+    padding: 0px 15px;
+  }
+  .subpage .heading {
+    width: 100%;
+  }
+  .subpage .heading h1 {
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+  }
+  .subpage .heading .headingGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: blue;
+  }
+  .subpage .heading .headingGroup button {
+    width: 200px;
+    background-color: aqua;
+    height: 40px;
+    align-self: flex-start;
+  }
+  .subpage .heading .headingGroup p {
+    text-align: left;
+    width: 100%;
+  }
+  .subpage .FAQs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  .subpage .FAQs .QQ {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .subpage .FAQs .QQ .item {
+    width: 100%;
+    width: 700px;
+    text-align: left;
+    margin: 10px 0px;
+  }
+  .subpage .FAQs .QQ .item h1 {
+    font-size: 20px;
+  }
+  .subpage .FAQs .QQ .item p {
+    width: 100%;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=kk.css.map */

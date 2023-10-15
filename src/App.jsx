@@ -4,6 +4,7 @@ import React, { useState, createContext } from 'react';
 import FooterV2 from "./components/footer/FooterV2";
 import Home from "./pages/home/31082023TestHome";
 import Navigationbar from "./components/navbar/test2";
+import Rr from "./components/navbar/kk";
 import { Provider } from "./index";
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/rr",
+          element: <Rr />,
         },
 
       ],
