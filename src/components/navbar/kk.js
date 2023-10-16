@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import './kk.css'
+import Appp from "../../pages/Appp"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleCheck, faMagnifyingGlass, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
@@ -18,7 +21,7 @@ const Rr = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${"53"}`
+        `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=16&api_key=6a3a9e9a61085d657b30d36d1c7b5ba7`
       )
       .then((res) => {
         setGenreMovies(res.data.results);
@@ -42,13 +45,14 @@ const Rr = () => {
   return (
     <main className='subpage'>
       <section className='heading'>
+        <h5><FontAwesomeIcon icon={faHouse} /><span> / </span>Video & Animation</h5>
         <h1>Intro & Outro Videos</h1>
         <div className='headingGroup'>
         <p>Engage your audience before and after they watch your videos with custom intros and outros.</p>
         <button>Intro & Outro Videos</button>
         </div>
       </section>
-      <div className="flex-parent">
+      {/* <div className="flex-parent">
           {genreMovies.map((post) =>isLoading ? (
               <div className="moviebox">
                 <SkeletonTheme baseColor="#202020" highlightColor="#444">
@@ -169,7 +173,28 @@ const Rr = () => {
             ))
 
                     }
+        </div> */}
+        <Appp />
+        <hr />
+        <div className="spangroup">
+          <h1>Explore More Intro & Outro Videos Services</h1>
+          <div className="span">
+            <span>Video Editing Services</span>
+            <span>Video ProductionL</span>
+            <span>Lyric video</span>
+            <span>Hire Video Editors</span>
+            <span>Intro & Outro Videos</span>
+            <span>Video Ads & Commercials</span>
+            <span>Animated Explainers</span>
+            <span>Whiteboard Animation</span>
+            <span>Visual Effects</span>
+            <span>Video Production</span>
+            <span>Music Videos Services</span>
+            <span>Youtube Intro Video</span>
+            <span>Animated title sequence</span>
+          </div>
         </div>
+        <hr />
         <section className='FAQs'>
             <h1>Intro & Outro Videos FAQs</h1>
             <div className='QQ'>
@@ -205,10 +230,36 @@ const Rr = () => {
                 </div>
             </div>
         </section>
-        <div>
-            <h1>Intro & Outro Videos Related Guides</h1>
-            
+        <section className='tenth container-fluid'>
+    <div className='ten'>
+    <h1>Intro & Outro Videos Related Guides</h1>
+    <div>
+    <div >
+    <div>
+              <div>
+              <img src="./img/guide-start-online-business-552-x2.jpeg" alt="Trulli"  width= "60" height= "70" />
+              </div>
+          <h3>Start an online business and work from home</h3>
+          <p>A complete guide to starting a small business online</p>
+            </div>
+            <div>
+            <div>
+              <img src="./img/guide-digital-marketing-552-x2.jpeg" width= "60" height= "70"/>
+              </div>
+          <h3>Digital marketing made easy</h3>
+          <p>A practical guide to understand what is digital marketing</p>
+            </div>
+            <div>
+            <div>
+              <img src="./img/guide-create-a-logo-552-x2.jpeg" width= "60" height= "70"/>
+              </div>
+          <h3>Create a logo for your business</h3>
+          <p>A step-by-step guide to create a memorable business logo</p>
+            </div>
+    </div>
+    </div>
         </div>
+        </section>
     </main>
   )
 }

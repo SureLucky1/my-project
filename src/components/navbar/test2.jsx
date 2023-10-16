@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
 import "./NavT3.scss";
+import { useMediaQuery } from 'react-responsive';
 import Modal from './Modal/Modal2'  
 import { Link, useLocation } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
@@ -99,6 +100,7 @@ function Navigationbar() {
   const [location, setLocation] = useState("fixed")
   const [show, setShow] = useState("none")
   const [opcc, setOpcc] = useState(0)
+  const [marginTop, setMarginTop] = useState(80)
  const [graphic, setGraphic] = useState(false);  
  const [digital, setDigital] = useState(false);  
  const [writing, setWriting] = useState(false);  
@@ -259,17 +261,61 @@ function Navigationbar() {
       if(pathname === "/rr"){
         setLocation("relative !important");
         setShow("flex");
+        setMarginTop(0)
         setOpcc(1)
       }else{
         setLocation("fixed");
         setShow("none");
         setOpcc(0)
+        setMarginTop(80)
       }
   }, [pathname]);
+  // const lg = useMediaQuery({ maxDeviceWidth: 1700 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1700px)');
+    mediaQuery.addListener(handleMediaQueryChange);
+    handleMediaQueryChange(mediaQuery);
+
+    return () => {
+      mediaQuery.removeListener(handleMediaQueryChange);
+    };
+  }, []);
+
+  const handleMediaQueryChange = (mediaQuery) => {
+    if (mediaQuery.matches) {
+      // 如果視口寬度小於或等於1700px
+      setIsMobile(true);
+    } else {
+      // 如果視口寬度大於1700px
+      setIsMobile(false);
+    }
+  };
+
      return (
        <div>
+        {isMobile ?
                  <style>
-        {`.navbar {
+        {`              @media screen and (max-width:1700px) {
+                .navbar {
+                  position: ${location}:
+    .ww {
+                .smallv2.hover {
+          display: flex;}
+          .small.hover {
+              display: none;
+          }}
+    }}
+    .navbar.hover {
+      position: ${location};
+      transition: none;
+      z-index: 50;
+  
+  }`}
+        </style>:<style>
+        {`       
+    .navbar {
               width: 100%;
               display: flex;
               flex-direction: row;
@@ -289,7 +335,7 @@ top: -0px;
   height: 140px;
   top: -0px;
   background-color: transparent;
-  width: 1500px;
+
   padding: 0px 1.7%;
   .small {
     position: relative !important;
@@ -300,16 +346,14 @@ top: -0px;
   }
   .small.hover {
     position: ${location};
-    margin-top: 80px;
+    margin-top: ${marginTop}px;
     width: 1500px;
     opacity: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 60px;
     z-index: 50;
-    transition: 1.5s;
     height: 50px;
     text-align: center;
         }
@@ -325,16 +369,18 @@ top: -0px;
         display: none;
         z-index: 99;
         opacity: 1;
-    }
+
   }
         .navbar.hover {
           position: ${location};
           transition: none;
           z-index: 50;
       
-      }`}
-        </style>
-       <div className={pathname !== "/rr" ? state.isHovering ? "navbar hover" : "navbar" : "navbar hoverr"}>
+      }
+
+      `}
+        </style>}
+       <div className={pathname !== "/rr" ? state.isHovering ? "navbar hover" : "navbar" : "navbar hover"}>
        <div className={pathname !== "/rr" ? state.isHovering ? "ww hover" : "ww" : "ww hoverr"}>
 
  

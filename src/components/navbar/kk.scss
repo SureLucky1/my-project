@@ -13,25 +13,74 @@
     @include dis;
     align-self: center;
     position: relative;
-    margin-top: 70px;
+    margin-top: 30px;
+    padding: 0px 20px;
 
-    h1 {
-        font-size: 30px;
-        text-align: left;
+    hr {
+        color: black;
     }
 
-    .headingGroup {
-        @include dis($flex-direction: row, $align-items: flex-start);
-        width: 100%;
-        background-color: blue;
+    .heading {
+        display: block;
 
-        button {
-            width: 200px;
-            background-color: aqua;
+        align-self: flex-start;
+
+
+        h5 {
+            font-size: 15px;
+            text-align: left;
+            margin-bottom: 15px;
+
+            span {
+                margin-left: 20px;
+            }
         }
 
-        p {
-            width: 800px;
+        h1 {
+            font-size: 30px;
+            text-align: left;
+        }
+
+        .headingGroup {
+            @include dis($flex-direction: row, $align-items: flex-start);
+            width: 100%;
+            background-color: blue;
+
+            button {
+                width: 200px;
+                background-color: aqua;
+            }
+
+            p {
+                width: 800px;
+            }
+        }
+    }
+
+    .spangroup {
+        display: block;
+        width: 1500px;
+
+        .span {
+            width: 100%s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            span {
+                width: fit-content;
+                padding: 5px 18px;
+                margin: 5px 10px;
+                border-radius: 15px;
+                background-color: rgb(198, 192, 192);
+                font-size: 15px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
@@ -58,54 +107,111 @@
         }
     }
 
-    .flex-parent {
+    .tenth {
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
 
-        .moviebox {
-            border-top-left-radius: 3.5rem;
-            border-top-right-radius: 3.5rem;
-            width: 18vw;
-            margin: 1vw;
+        .ten {
+            width: 1500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            border: 1px solid #e67832;
-            background-color: #e67832;
-            color: white;
-            text-decoration: none;
-
-            &:hover {
-                filter: grayscale(75%);
-                border: 1px solid #00c3ff;
-                background-color: #00c3ff;
-            }
-
-            .movieimg {
-                border-top-left-radius: 3.5rem;
-                border-top-right-radius: 3.5rem;
-                width: calc(18vw - 2px);
-                object-fit: cover;
-            }
-
-            .noimg {
-                border-top-left-radius: 3.5rem;
-                border-top-right-radius: 3.5rem;
-                width: calc(18vw - 2px);
-                height: 26.5vw;
-                background-color: gray;
-            }
-
-            .caption {
-                padding: 5px;
-                margin: 0;
-                font-weight: bold;
-                font-size: 20px;
+            h1 {
                 text-align: center;
+                align-self: flex-start;
+            }
+
+            div {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 10px;
+
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    margin: 10px 0px;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        width: 440px;
+                        height: auto;
+
+                        div {
+                            width: 100%;
+                            height: auto;
+                            border-bottom: 2px solid rgb(207, 200, 200);
+
+                        }
+                    }
+                }
             }
         }
-
     }
+
+    // .flex-parent {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     flex-wrap: wrap;
+    //     width: 100%;
+
+    //     .moviebox {
+    //         border-radius: 1.5rem;
+    //         width: 18vw;
+    //         margin: 1vw;
+
+    //         border: 1px solid #e67832;
+    //         background-color: #e67832;
+    //         color: white;
+    //         text-decoration: none;
+
+    //         &:hover {
+    //             filter: grayscale(75%);
+    //             border: 1px solid #00c3ff;
+    //             background-color: #00c3ff;
+    //         }
+
+    //         .movieimg {
+    //             border-top-left-radius: 3.5rem;
+    //             border-top-right-radius: 3.5rem;
+    //             width: calc(18vw - 2px);
+    //             object-fit: cover;
+    //         }
+
+    //         .noimg {
+    //             border-top-left-radius: 3.5rem;
+    //             border-top-right-radius: 3.5rem;
+    //             width: calc(18vw - 2px);
+    //             height: 26.5vw;
+    //             background-color: gray;
+    //         }
+
+    //         .caption {
+    //             padding: 5px;
+    //             margin: 0;
+    //             font-weight: bold;
+    //             font-size: 20px;
+    //             text-align: center;
+    //         }
+    //     }
+
+    // }
 }
 
 
