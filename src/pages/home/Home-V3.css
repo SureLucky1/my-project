@@ -283,7 +283,7 @@ html {
   margin: 30px 0 5px;
 }
 .third .wrapper .carousel .card .intro span {
-  color: #6A6D78;
+  color: #6a6d78;
   font-size: 1.31rem;
 }
 
@@ -666,7 +666,7 @@ html {
   margin: 30px 0 5px;
 }
 .ninth .wrapper .carousel .card .intro div span {
-  color: #6A6D78;
+  color: #6a6d78;
   font-size: 1.31rem;
 }
 
@@ -2742,4 +2742,9 @@ html {
     width: 100%;
     height: auto;
   }
+}
+.demo-card {
+  outline: 1px solid gray;
+  padding: 16px;
+  border-radius: 16px;
 }/*# sourceMappingURL=Home-V3.css.map */
